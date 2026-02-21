@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mati Ullah | Senior Full-Stack Engineer</title>
+<title>Mati Ullah | Full-Stack Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #0e1117;
-    --card: #161b22;
-    --border: #2a2f36;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --accent: #4f46e5;
-    --accent-soft: #312e81;
+    --bg: #0c0f14;
+    --card: #151a22;
+    --border: #242b36;
+    --text: #e8eef7;
+    --muted: #8b96a8;
+    --accent: #5b8cff;
+    --accent-soft: #2f4bb7;
 }
 
 * {
@@ -37,14 +37,13 @@ body {
     padding: 40px 20px;
 }
 
-/* Hero */
 .hero {
-    padding: 120px 20px 80px;
     text-align: center;
+    padding: 120px 20px 80px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 700;
     letter-spacing: -1px;
 }
@@ -54,7 +53,7 @@ body {
 }
 
 .hero p {
-    max-width: 600px;
+    max-width: 650px;
     margin: 20px auto;
     color: var(--muted);
     font-size: 18px;
@@ -67,7 +66,7 @@ body {
     background: var(--accent);
     color: white;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: 600;
     transition: 0.3s ease;
 }
@@ -76,22 +75,20 @@ body {
     background: var(--accent-soft);
 }
 
-/* Sections */
 section {
     margin-top: 100px;
 }
 
 .section-title {
-    font-size: 28px;
-    margin-bottom: 40px;
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
 }
 
-/* Cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
 .card {
@@ -103,8 +100,15 @@ section {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: var(--accent);
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 20px;
+    fill: var(--accent);
 }
 
 .card h3 {
@@ -116,13 +120,12 @@ section {
     font-size: 15px;
 }
 
-/* Footer */
 footer {
     margin-top: 120px;
     text-align: center;
     padding: 40px 0;
-    color: var(--muted);
     border-top: 1px solid var(--border);
+    color: var(--muted);
 }
 </style>
 </head>
@@ -132,63 +135,90 @@ footer {
 <div class="hero">
     <h1>Mati <span>Ullah</span></h1>
     <p>
-        Senior Full-Stack Engineer with 9+ years of experience building
-        scalable e-commerce systems, cloud-native architectures, and high-performance APIs.
+        Senior Full-Stack Engineer with 9+ years of experience designing scalable
+        e-commerce platforms, cloud-native systems, and production-grade APIs.
     </p>
-    <a href="https://github.com/yourusername" class="btn">View GitHub</a>
+    <a href="https://github.com/matiullah31" class="btn">View GitHub</a>
 </div>
 
 <div class="container">
 
-    <section>
-        <h2 class="section-title">Core Expertise</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Backend Engineering</h3>
-                <p>PHP 8.x, Laravel, CodeIgniter, REST APIs, scalable system architecture.</p>
-            </div>
+<section>
+<h2 class="section-title">Core Expertise</h2>
 
-            <div class="card">
-                <h3>Frontend Development</h3>
-                <p>React.js, Vue.js, JavaScript ES6+, responsive UI systems.</p>
-            </div>
+<div class="grid">
 
-            <div class="card">
-                <h3>Cloud & DevOps</h3>
-                <p>AWS EC2, ECS, RDS, S3, CloudFront, Route53, Docker, CI/CD.</p>
-            </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M3 3h18v4H3V3zm0 7h18v4H3v-4zm0 7h18v4H3v-4z"/>
+</svg>
+<h3>Backend Engineering</h3>
+<p>PHP 8.x, Laravel, API architecture, database optimization, scalable system design.</p>
+</div>
 
-            <div class="card">
-                <h3>E-commerce Systems</h3>
-                <p>Multi-warehouse order flows, product scaling, performance optimization.</p>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M4 4h16v16H4zM2 2v20h20V2H2z"/>
+</svg>
+<h3>Frontend Systems</h3>
+<p>React.js, Vue.js, component architecture, responsive UI development.</p>
+</div>
 
-    <section>
-        <h2 class="section-title">What I Build</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>High-Traffic Platforms</h3>
-                <p>Production-ready applications handling large product catalogs and traffic.</p>
-            </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2l10 6v8l-10 6-10-6V8l10-6z"/>
+</svg>
+<h3>AWS & Cloud</h3>
+<p>EC2, ECS, RDS, S3, CloudFront, Route53, Docker deployments & CI/CD pipelines.</p>
+</div>
 
-            <div class="card">
-                <h3>Cloud Architectures</h3>
-                <p>Cost-optimized, scalable AWS infrastructure for modern SaaS systems.</p>
-            </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 4a8 8 0 100 16 8 8 0 000-16z"/>
+</svg>
+<h3>E-Commerce Architecture</h3>
+<p>Multi-warehouse fulfillment systems, product scaling, performance optimization.</p>
+</div>
 
-            <div class="card">
-                <h3>API-Driven Systems</h3>
-                <p>Robust integrations with payment gateways, external APIs, and microservices.</p>
-            </div>
-        </div>
-    </section>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Engineering Philosophy</h2>
+
+<div class="grid">
+
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2l4 8H8l4-8zm0 20l-4-8h8l-4 8z"/>
+</svg>
+<h3>Build for Scale</h3>
+<p>Systems should grow without breaking. Architecture first, features second.</p>
+</div>
+
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M3 12h18M12 3v18"/>
+</svg>
+<h3>Clean & Maintainable</h3>
+<p>Readable code outlives clever code. Maintainability is long-term velocity.</p>
+</div>
+
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M5 3h14v18H5z"/>
+</svg>
+<h3>Cloud Native Thinking</h3>
+<p>Design applications with infrastructure awareness from day one.</p>
+</div>
+
+</div>
+</section>
 
 </div>
 
 <footer>
-    © 2026 Mati Ullah — Built with precision & intention.
+© 2026 Mati Ullah · Engineered with intention.
 </footer>
 
 </body>
