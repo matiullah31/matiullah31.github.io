@@ -3,201 +3,328 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mati Ullah — Engineer</title>
+<title>Mati Ullah | Senior Full-Stack Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #0b0f14;
-  --surface: #11161d;
-  --border: #1f2733;
-  --text: #e6edf3;
-  --muted: #7d8590;
-  --accent: #3b82f6;
+    --bg: #0a0f18;
+    --surface: rgba(22,26,34,0.9);
+    --card: rgba(28,34,45,0.9);
+    --border: rgba(50,60,80,0.3);
+    --text: #eef4ff;
+    --muted: #8a94a6;
+    --accent: #4f7cff;
+    --accent-soft: rgba(79,124,255,0.2);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+    font-family:'Inter',sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
+/* Particles background */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container */
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
+    max-width: 1200px;
+    margin:auto;
+    padding:60px 25px;
 }
 
+/* Hero */
 .hero {
-  padding: 140px 0 100px;
+    text-align:center;
+    padding:160px 20px 120px;
 }
 
 .hero h1 {
-  font-size: 64px;
-  font-weight: 800;
-  letter-spacing: -2px;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2px;
 }
 
 .hero h1 span {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .hero p {
-  margin-top: 30px;
-  max-width: 700px;
-  font-size: 20px;
-  color: var(--muted);
+    max-width: 700px;
+    margin:30px auto;
+    font-size:20px;
+    color: var(--muted);
 }
 
-.hero a {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 14px 32px;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--text);
-  border-radius: 40px;
-  transition: 0.3s ease;
+.hero .btn {
+    display:inline-block;
+    margin-top:40px;
+    padding:15px 35px;
+    border-radius:50px;
+    background: var(--accent);
+    color:white;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.hero a:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+.hero .btn:hover {
+    transform:translateY(-3px);
+    box-shadow:0 0 20px var(--accent-soft);
 }
 
-/* Split Section */
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-top: 120px;
+/* Sections */
+.section-title {
+    font-size:36px;
+    font-weight:700;
+    margin-bottom:50px;
+    text-align:center;
 }
 
-.split h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+/* Grid & Cards */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
-.split p {
-  color: var(--muted);
-  margin-bottom: 20px;
+.card, .project, .feature-box {
+    background: var(--card);
+    border-radius:20px;
+    padding:30px;
+    border:1px solid var(--border);
+    backdrop-filter:blur(10px);
+    transition:.3s;
 }
 
-/* Minimal list */
-.feature {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+.card:hover, .project:hover, .feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow:0 10px 25px var(--accent-soft);
 }
 
-.feature svg {
-  width: 22px;
-  height: 22px;
-  stroke: var(--accent);
-  stroke-width: 2;
-  fill: none;
-  margin-right: 15px;
+/* Skills */
+.skills {
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
 }
 
-.feature span {
-  color: var(--muted);
+.skill {
+    padding:10px 22px;
+    border-radius:30px;
+    background: var(--surface);
+    border:1px solid var(--border);
+    font-size:14px;
+    transition:.3s;
 }
 
+.skill:hover {
+    border-color: var(--accent);
+    box-shadow:0 5px 15px var(--accent-soft);
+}
+
+/* Projects */
+.project h3 {
+    margin-bottom:15px;
+}
+.project p {
+    color: var(--muted);
+}
+
+/* Features/Philosophy */
+.feature-box {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.feature-box svg {
+    width:32px;
+    height:32px;
+    stroke: var(--accent);
+    stroke-width:2;
+    fill:none;
+}
+
+/* Connect Section */
+.connect {
+    text-align:center;
+    margin-top:140px;
+    padding:80px 20px;
+    border-top:1px solid var(--border);
+}
+
+.connect a {
+    margin:0 15px;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+    border:1px solid var(--accent);
+    color: var(--accent);
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.connect a:hover {
+    background: var(--accent);
+    color:white;
+    box-shadow:0 0 20px var(--accent-soft);
+}
+
+/* Footer */
 footer {
-  margin-top: 160px;
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  text-align: center;
+    text-align:center;
+    padding:40px 0;
+    color:var(--muted);
+    border-top:1px solid var(--border);
 }
 
-@media(max-width: 900px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-  }
+@media(max-width:768px){
+.hero h1{
+    font-size:48px;
+}
 }
 </style>
+
+<!-- Particle JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 </head>
 <body>
 
+<!-- Particle Background -->
+<div id="particles"></div>
+
 <div class="container">
 
-  <section class="hero">
-    <h1>Mati <span>Ullah</span></h1>
-    <p>
-      Senior Full-Stack Engineer with 9+ years designing scalable e-commerce
-      systems and AWS cloud architectures. I build systems that grow without breaking.
-    </p>
-    <a href="https://github.com/matiullah31">Explore GitHub</a>
-  </section>
+<!-- HERO -->
+<section class="hero">
+<h1>Mati <span>Ullah</span></h1>
+<p>Senior Full-Stack Engineer with 9+ years building scalable e-commerce systems, AWS cloud architectures, and high-performance APIs.</p>
+<a class="btn" href="https://github.com/matiullah31">View GitHub</a>
+</section>
 
-  <section class="split">
-    <div>
-      <h2>Engineering Focus</h2>
-      <p>
-        I specialize in backend architecture, performance optimization,
-        and cloud-native infrastructure for production-scale applications.
-      </p>
+<!-- TECH SKILLS -->
+<section>
+<h2 class="section-title">Technical Skills</h2>
+<div class="skills">
+<span class="skill">PHP 8+</span>
+<span class="skill">Laravel</span>
+<span class="skill">CodeIgniter</span>
+<span class="skill">React.js</span>
+<span class="skill">Vue.js</span>
+<span class="skill">JavaScript</span>
+<span class="skill">HTML5</span>
+<span class="skill">CSS3</span>
+<span class="skill">AWS EC2</span>
+<span class="skill">AWS ECS</span>
+<span class="skill">RDS</span>
+<span class="skill">S3</span>
+<span class="skill">CloudFront</span>
+<span class="skill">Docker</span>
+</div>
+</section>
 
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg>
-        <span>Laravel & API architecture</span>
-      </div>
+<!-- EXPERIENCE & PHILOSOPHY -->
+<section style="margin-top:140px">
+<h2 class="section-title">Experience & Philosophy</h2>
+<div class="grid">
+<div class="feature-box">
+<svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg>
+<div>
+<h3>Backend & Architecture</h3>
+<p>Scalable backend systems, database optimization, and high-performance API-driven applications.</p>
+</div>
+</div>
 
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><path d="M12 2l7 7-7 7-7-7z"/></svg>
-        <span>AWS ECS, RDS, S3, CloudFront</span>
-      </div>
+<div class="feature-box">
+<svg viewBox="0 0 24 24"><path d="M12 2l7 7-7 7-7-7z"/></svg>
+<div>
+<h3>Cloud Engineering</h3>
+<p>AWS infrastructure, CI/CD pipelines, containerized deployments, and cost optimization.</p>
+</div>
+</div>
 
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
-        <span>Multi-warehouse e-commerce systems</span>
-      </div>
+<div class="feature-box">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+<div>
+<h3>E-commerce Systems</h3>
+<p>Multi-warehouse inventory, product catalog automation, and fulfillment optimization.</p>
+</div>
+</div>
+</div>
+</section>
 
-    </div>
+<!-- PROJECTS -->
+<section style="margin-top:140px">
+<h2 class="section-title">Featured Projects</h2>
+<div class="grid">
+<div class="project">
+<h3>Savekart.pk</h3>
+<p>Full-stack e-commerce platform with PHP & Vue.js, AWS cloud hosting, product automation, and scalable database design.</p>
+</div>
+<div class="project">
+<h3>Tuscany Villas Booking</h3>
+<p>Hotel reservation system integrated with payment gateways, booking APIs, and automated email notifications.</p>
+</div>
+</div>
+</section>
 
-    <div>
-      <h2>Philosophy</h2>
-      <p>
-        Good software is predictable, maintainable, and scalable.
-        Architecture decisions determine long-term velocity.
-      </p>
-
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><path d="M4 12h16"/></svg>
-        <span>Build for scale</span>
-      </div>
-
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <span>Readable > clever code</span>
-      </div>
-
-      <div class="feature">
-        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
-        <span>Cloud-aware system design</span>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Mati Ullah · Built with clarity & discipline.
-  </footer>
+<!-- CONNECT -->
+<section class="connect">
+<h2 class="section-title">Connect With Me</h2>
+<a href="https://www.linkedin.com/in/matiullah31" target="_blank">LinkedIn</a>
+<a href="https://www.upwork.com/freelancers/matiullah8" target="_blank">Upwork</a>
+<a href="mailto:matiullah0307@gmail.com">Email</a>
+<a href="https://github.com/matiullah31" target="_blank">GitHub</a>
+</section>
 
 </div>
+
+<footer>
+© 2026 Mati Ullah · Built with precision & intention
+</footer>
+
+<script>
+tsParticles.load("particles", {
+    particles: {
+        number: { value: 80 },
+        color: { value: "#4f7cff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: { min: 1, max: 3 } },
+        move: { enable: true, speed: 0.6, direction: "none", outModes: "out" }
+    },
+    interactivity: {
+        events: {
+            onHover: { enable: true, mode: "repulse" },
+            onClick: { enable: true, mode: "push" }
+        },
+        modes: {
+            repulse: { distance: 100 },
+            push: { quantity: 4 }
+        }
+    },
+    detectRetina: true
+});
+</script>
 
 </body>
 </html>
