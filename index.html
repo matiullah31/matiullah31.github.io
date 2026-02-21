@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mati Ullah | Senior Full-Stack Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --border: #2a2f36;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #4f46e5;
+    --accent-soft: #312e81;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Hero */
+.hero {
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 20px auto;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-soft);
+}
+
+/* Sections */
+section {
+    margin-top: 100px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    margin-top: 120px;
+    text-align: center;
+    padding: 40px 0;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>Mati <span>Ullah</span></h1>
+    <p>
+        Senior Full-Stack Engineer with 9+ years of experience building
+        scalable e-commerce systems, cloud-native architectures, and high-performance APIs.
+    </p>
+    <a href="https://github.com/yourusername" class="btn">View GitHub</a>
+</div>
+
+<div class="container">
+
+    <section>
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Backend Engineering</h3>
+                <p>PHP 8.x, Laravel, CodeIgniter, REST APIs, scalable system architecture.</p>
+            </div>
+
+            <div class="card">
+                <h3>Frontend Development</h3>
+                <p>React.js, Vue.js, JavaScript ES6+, responsive UI systems.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud & DevOps</h3>
+                <p>AWS EC2, ECS, RDS, S3, CloudFront, Route53, Docker, CI/CD.</p>
+            </div>
+
+            <div class="card">
+                <h3>E-commerce Systems</h3>
+                <p>Multi-warehouse order flows, product scaling, performance optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">What I Build</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>High-Traffic Platforms</h3>
+                <p>Production-ready applications handling large product catalogs and traffic.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud Architectures</h3>
+                <p>Cost-optimized, scalable AWS infrastructure for modern SaaS systems.</p>
+            </div>
+
+            <div class="card">
+                <h3>API-Driven Systems</h3>
+                <p>Robust integrations with payment gateways, external APIs, and microservices.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Mati Ullah — Built with precision & intention.
+</footer>
+
+</body>
+</html>
