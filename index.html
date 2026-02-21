@@ -1,225 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mati Ullah | Full-Stack Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mati Ullah — Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #0c0f14;
-    --card: #151a22;
-    --border: #242b36;
-    --text: #e8eef7;
-    --muted: #8b96a8;
-    --accent: #5b8cff;
-    --accent-soft: #2f4bb7;
+  --bg: #0b0f14;
+  --surface: #11161d;
+  --border: #1f2733;
+  --text: #e6edf3;
+  --muted: #7d8590;
+  --accent: #3b82f6;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
 .hero {
-    text-align: center;
-    padding: 120px 20px 80px;
+  padding: 140px 0 100px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    font-weight: 700;
-    letter-spacing: -1px;
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 
-.hero span {
-    color: var(--accent);
+.hero h1 span {
+  color: var(--accent);
 }
 
 .hero p {
-    max-width: 650px;
-    margin: 20px auto;
-    color: var(--muted);
-    font-size: 18px;
+  margin-top: 30px;
+  max-width: 700px;
+  font-size: 20px;
+  color: var(--muted);
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 8px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    margin-top: 25px;
-    font-weight: 600;
-    transition: 0.3s ease;
+.hero a {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 40px;
+  transition: 0.3s ease;
 }
 
-.btn:hover {
-    background: var(--accent-soft);
+.hero a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
-section {
-    margin-top: 100px;
+/* Split Section */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 120px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 50px;
+.split h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+.split p {
+  color: var(--muted);
+  margin-bottom: 20px;
 }
 
-.card {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 14px;
-    border: 1px solid var(--border);
-    transition: 0.3s ease;
+/* Minimal list */
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
+.feature svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent);
+  stroke-width: 2;
+  fill: none;
+  margin-right: 15px;
 }
 
-.icon {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 20px;
-    fill: var(--accent);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-}
-
-.card p {
-    color: var(--muted);
-    font-size: 15px;
+.feature span {
+  color: var(--muted);
 }
 
 footer {
-    margin-top: 120px;
-    text-align: center;
-    padding: 40px 0;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
+  margin-top: 160px;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media(max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
 }
 </style>
 </head>
-
 <body>
-
-<div class="hero">
-    <h1>Mati <span>Ullah</span></h1>
-    <p>
-        Senior Full-Stack Engineer with 9+ years of experience designing scalable
-        e-commerce platforms, cloud-native systems, and production-grade APIs.
-    </p>
-    <a href="https://github.com/matiullah31" class="btn">View GitHub</a>
-</div>
 
 <div class="container">
 
-<section>
-<h2 class="section-title">Core Expertise</h2>
+  <section class="hero">
+    <h1>Mati <span>Ullah</span></h1>
+    <p>
+      Senior Full-Stack Engineer with 9+ years designing scalable e-commerce
+      systems and AWS cloud architectures. I build systems that grow without breaking.
+    </p>
+    <a href="https://github.com/matiullah31">Explore GitHub</a>
+  </section>
 
-<div class="grid">
+  <section class="split">
+    <div>
+      <h2>Engineering Focus</h2>
+      <p>
+        I specialize in backend architecture, performance optimization,
+        and cloud-native infrastructure for production-scale applications.
+      </p>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M3 3h18v4H3V3zm0 7h18v4H3v-4zm0 7h18v4H3v-4z"/>
-</svg>
-<h3>Backend Engineering</h3>
-<p>PHP 8.x, Laravel, API architecture, database optimization, scalable system design.</p>
-</div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg>
+        <span>Laravel & API architecture</span>
+      </div>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M4 4h16v16H4zM2 2v20h20V2H2z"/>
-</svg>
-<h3>Frontend Systems</h3>
-<p>React.js, Vue.js, component architecture, responsive UI development.</p>
-</div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><path d="M12 2l7 7-7 7-7-7z"/></svg>
+        <span>AWS ECS, RDS, S3, CloudFront</span>
+      </div>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2l10 6v8l-10 6-10-6V8l10-6z"/>
-</svg>
-<h3>AWS & Cloud</h3>
-<p>EC2, ECS, RDS, S3, CloudFront, Route53, Docker deployments & CI/CD pipelines.</p>
-</div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+        <span>Multi-warehouse e-commerce systems</span>
+      </div>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 4a8 8 0 100 16 8 8 0 000-16z"/>
-</svg>
-<h3>E-Commerce Architecture</h3>
-<p>Multi-warehouse fulfillment systems, product scaling, performance optimization.</p>
-</div>
+    </div>
 
-</div>
-</section>
+    <div>
+      <h2>Philosophy</h2>
+      <p>
+        Good software is predictable, maintainable, and scalable.
+        Architecture decisions determine long-term velocity.
+      </p>
 
-<section>
-<h2 class="section-title">Engineering Philosophy</h2>
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><path d="M4 12h16"/></svg>
+        <span>Build for scale</span>
+      </div>
 
-<div class="grid">
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span>Readable > clever code</span>
+      </div>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2l4 8H8l4-8zm0 20l-4-8h8l-4 8z"/>
-</svg>
-<h3>Build for Scale</h3>
-<p>Systems should grow without breaking. Architecture first, features second.</p>
-</div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+        <span>Cloud-aware system design</span>
+      </div>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M3 12h18M12 3v18"/>
-</svg>
-<h3>Clean & Maintainable</h3>
-<p>Readable code outlives clever code. Maintainability is long-term velocity.</p>
-</div>
+    </div>
+  </section>
 
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M5 3h14v18H5z"/>
-</svg>
-<h3>Cloud Native Thinking</h3>
-<p>Design applications with infrastructure awareness from day one.</p>
-</div>
+  <footer>
+    © 2026 Mati Ullah · Built with clarity & discipline.
+  </footer>
 
 </div>
-</section>
-
-</div>
-
-<footer>
-© 2026 Mati Ullah · Engineered with intention.
-</footer>
 
 </body>
 </html>
